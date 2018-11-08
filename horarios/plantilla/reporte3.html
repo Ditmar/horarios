@@ -1,0 +1,19 @@
+{% extends "base.html"%}
+{% block container%}
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		{% for item in ambientes %}
+			updateHorario("t_"+{{item.id}},{{item.id}},'/porAmbiente/{{item.id}}/',"reporte")
+			//updateHorario("table3","contenedor3",'/porAmbiente/'+GLOBAL_ID_AMB+'/');
+			
+		{% endfor %}
+	});
+</script>
+{% for item in ambientes %}
+	<b>{{item}}</b>
+	<div id="{{item.id}}">
+		
+	</div>
+{%  endfor %}
+
+{% endblock %}
