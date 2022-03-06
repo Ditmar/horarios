@@ -1,0 +1,18 @@
+{% extends "base.html"%}
+{% block container%}
+
+<table class="table">
+	<tr>
+		<th>Hora</th>
+		<th>Materias</th>
+		<th>Ingeniero</th>
+	</tr>
+{% for item in r %}
+	<tr>
+		<td>{{item.horas}}</td>
+		<td>{{item.sem}}</td>
+		<td>{{item.docentes.nombre}} {{item.docentes.apellido}}</td>
+	</tr>
+{%  endfor %}
+</table>
+{% endblock %}

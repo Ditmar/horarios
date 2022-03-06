@@ -74,7 +74,7 @@ def setMaterias():
 def setHoras():
 	for i in range(0,5):
 		hora=7
-		minutos=45		
+		minutos=0		
 		for j in range(0,19):
 			p=Horarios()
 			p.dia=i
@@ -93,7 +93,7 @@ class Horas():
 	m=0
 def getHora(i):
 	i=int(i)
-	m=45
+	m=0
 	h=7
 	min_m=45
 	ins=Horas()
