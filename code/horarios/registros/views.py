@@ -119,7 +119,9 @@ def getHora(i):
 		return ins
 	return ins
 def getHorasDias(request):
-	horas=Horarios.objects.all()[0:18]
+
+	horas=Horarios.objects.filter(Q(dia=0))
+	print (horas)
 	data=[]
 	for i in horas:
 		aux="%s:%s" %(i.hora,i.minutos)
