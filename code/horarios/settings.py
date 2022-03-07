@@ -59,7 +59,7 @@ WSGI_APPLICATION = 'horarios.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, './db/db.sqlite5'),
+        'NAME': os.path.join(BASE_DIR, './db/db.sqlite4'),
     }
 }
 
@@ -85,6 +85,5 @@ STATIC_URL = '/static/'
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 TEMPLATE_DIRS = (os.path.join(RUTA_PROYECTO,"plantilla"),)
-print TEMPLATE_DIRS
 STATICFILES_DIRS = (os.path.join(RUTA_PROYECTO,"static"),)
 MEDIA_ROOT = os.path.join(RUTA_PROYECTO,"media")
