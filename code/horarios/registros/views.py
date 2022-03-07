@@ -74,7 +74,7 @@ def setMaterias():
 def setHoras():
 	for i in range(0,5):
 		hora=7
-		minutos=0		
+		minutos=45	
 		for j in range(0,19):
 			p=Horarios()
 			p.dia=i
@@ -93,7 +93,7 @@ class Horas():
 	m=0
 def getHora(i):
 	i=int(i)
-	m=0
+	m=45
 	h=7
 	min_m=45
 	ins=Horas()
@@ -213,15 +213,16 @@ def getAmbiente(request,id):
 	request.session["idAmb"]=id
 	return render_to_response("loadAmbiente.html",{"amb":amb},RequestContext(request))
 def guardar(request):
+	print("guardar")
 	data={}
 	data["response"]=False
 	if(request.method=="POST"):
 		formData=i_j(request.POST)
 		if(formData.is_valid()):
-			#pdb.set_trace()
+
 			i=request.POST["i"]
 			j=request.POST["j"]
-			HorasProgram=relacion();
+			HorasProgram=relacion()
 			#bajo los indicadores i j construimos la hora exacta
 			hora=getHora(i)
 			dias=j
