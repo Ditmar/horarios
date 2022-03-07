@@ -1,0 +1,48 @@
+{% extends "base.html"%}
+{% block container%}
+
+{% for data in r %}
+<table class="table">
+	<tr><td colspan="8" style="border:1px solid;"><center><b>{{data.dia}} Mañana</b></center></td></tr>
+	<tr>
+		<th width="100">Hora</th>
+		<th width="115">Materia</th>
+		<th width="90">Semestre</th>
+		<th width="90">Ambiente</th>
+		<th width="300">Nombre</th>
+		<th width="250">Tema</th>
+		<th width="120">Firma de Entrada</th>
+		<th width="120">Firma de Salida</th>
+	</tr>
+{% for item in data.resultados %}
+	<tr>
+		<td>{{item.horas}}</td>
+		<td>{{item.ins.materia.sigla}}</td>
+		<td>{{item.sem}}</td>
+		<td>{{item.ins.ambientes.nombre}}</td>
+		<td>{{item.ins.docentes.nombre}} {{item.ins.docentes.apellido}}</td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+		{% if item.after %}
+	<tr>
+		<td colspan="8" style="border:1px solid;">
+			<center><b>{{data.dia}} Tarde </b></center>
+		</td>
+	</tr>
+	<tr>
+		<th width="100">Hora</th>
+		<th width="115">Materia</th>
+		<th width="90">Semestre</th>
+		<th width="90">Ambiente</th>
+		<th width="300">Nombre</th>
+		<th width="250">Tema</th>
+		<th width="120">Firma de Entrada</th>
+		<th width="120">Firma de Salida</th>
+	</tr>
+		{% endif %}
+{%  endfor %}
+</table>
+{%  endfor %}
+{% endblock %}
