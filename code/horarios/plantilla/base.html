@@ -142,8 +142,8 @@
 					{
 						css = "colision";
 					}
-					$("#"+data[i].fila+"_"+tableid+"_"+data[i].columna+" .selector").append('<div class="'+css+'" title="'+data[i].descripcion+'">'+data[i].materia+'</div><a href="#" idHorario="'+data[i].id+'" class="borrar">Borrar</a>');
-					/*$("#"+data[i].fila+"_"+tableid+"_"+data[i].columna+" .selector").append('<div class="'+css+'" title="'+data[i].descripcion+'">'+data[i].materia+'</div>');*/
+					//$("#"+data[i].fila+"_"+tableid+"_"+data[i].columna+" .selector").append('<div class="'+css+'" title="'+data[i].descripcion+'">'+data[i].materia+'</div><a href="#" idHorario="'+data[i].id+'" class="borrar">Borrar</a>');
+					$("#"+data[i].fila+"_"+tableid+"_"+data[i].columna+" .selector").append('<div class="'+css+'" title="'+data[i].descripcion+'">'+data[i].materia+'</div>');
 					/*append('<div class="'+css+'" title="'+data[i].descripcion+'">'+data[i].materia+'</div>');*/
 					$("#"+data[i].fila+"_"+tableid+"_"+data[i].columna+" .selector a").click(function(event) {
 						event.preventDefault();
